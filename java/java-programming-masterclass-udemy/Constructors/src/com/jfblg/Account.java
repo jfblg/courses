@@ -7,6 +7,24 @@ public class Account {
     private String customerEmailAddress;
     private String customerPhoneNumber;
 
+    public Account() {
+        this("12345", 1000.0, "Frantisek Janus", "ferojanus@gmail.com", "+43276349485");
+        System.out.println("Empty constructor called");
+    }
+
+    public Account(String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this("1111", 20000.0, customerName, customerEmailAddress, customerPhoneNumber);
+    }
+
+    public Account(String number, double balance, String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this.number = number;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.customerEmailAddress = customerEmailAddress;
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
+
+
     public void deposit(double depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + "processed. New balance: " + this.balance);
