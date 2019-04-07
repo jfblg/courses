@@ -45,6 +45,15 @@ public class Main {
         slovanBA.matchResult(fremantle, 3, 1);
 //        slovanBA.matchResult(baseballTeam, 4, 4);
 
+        System.out.println("------------");
+        System.out.println("Rankings");
+        System.out.println(fremantle.getName() + " : " + fremantle.ranking());
+        System.out.println(slovanBA.getName() + " : " + slovanBA.ranking());
+        System.out.println(hawthorn.getName() + " : " + hawthorn.ranking());
+
+        System.out.println("compareTo");
+        System.out.println(fremantle.compareTo(slovanBA));
+        System.out.println(slovanBA.compareTo(hawthorn));
 
     }
 
